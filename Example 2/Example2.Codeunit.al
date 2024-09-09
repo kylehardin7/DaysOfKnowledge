@@ -27,7 +27,7 @@ codeunit 50000 "Calling"
     var
         IWhichCodeunit: Interface "IWhichCodeunit";
     begin
-        IWhichCodeunit := WhichCodeunit::Codeunit1; // This should not be hardcoded
+        IWhichCodeunit := SetupTable.WhichCodeunit;
         Message(IWhichCodeunit.WhichCodeunit());
     end;
 }
